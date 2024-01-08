@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Hello Darkness</h1>
+    <div class="hide" id="imageCropper"></div>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <div id="uploadForm"></div><p><input type="file" name="file" id="imgInp"></p></div>
+      <div class="hide" id="imageBox"><img id="uploadedImage" src="#" alt="your image" /></div>
+      <p><input type="submit" value="Submit" class="hide" id="generateMeme"></p>
+    </form>
+    <script src="{{url_for('static', filename='script.js')}}" async defer></script>
+{% endblock %}
